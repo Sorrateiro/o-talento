@@ -4,24 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alistamento</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pasta/homem-militar (1).png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #result{
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        #result img {
+            max-width: 200px;
+            display: block;
+            margin: 10px auto;}
+    </style>
 </head>
-<body><header><img src="logotipo" alt="logotipo">logotipo 
-     <h1>saite principal
+<body><header><img src="pasta/Enos-Layuk-Wacky-Dastardly-06-Sarge.48.png" alt="logotipo" id="long"> 
+     <h1>ALISTAMENTO MILITAR ONLINE   
     
     </h1>
-    <select name="menuuu" id="menum"><object data="carro" type="texto"><a href="">tessto</a></object></select>
+    <label for="interesse" class="OPTIONSD">escolha seu interesse </label>
+    <select id="opcoes" >
+        <option value="">--Selecione--</option>
+      <option value="marinha">marinha </option>
+      <option value="exercito">exercito</option>
+      <option value="aeronaltica">aeronaltica</option>
+      <option value="outros">outros </option>
+    </select>
+    
 </header>
-<p>texto do arquivo </p>
-<p><a href="mailto:"> email </a><br>
-<a href="pasta/saitesecundario.html"> emcaminhar para 2 </a>
 
 
+<div id="result"></div>
 
-</p>
-    <script>
-      
-    </script>
+<script>
+    const selectElement = document.getElementById("opcoes");
+    const resultadoDiv = document.getElementById("result");
+ 
+    selectElement.addEventListener('change', function(){
+        const opcaoSelecionada= selectElement.value;
+
+        // Cria o texto correspondente à opção selecionada
+        resultadoDiv.innerHTML = '';
+
+        let texto='';
+        let imgSrc = '';
+
+         // Define texto e imagem com base na opção selecionada
+        if (opcaoSelecionada==='marinha') {
+            texto='voce selecionou a opção marinha ';  
+            imgSrc = 'pasta/marinha do brazil.png'; 
+            
+         
+         } else if(opcaoSelecionada==='exercito'){
+            texto='voce selecionou exercito do brazil ';
+            imgSrc = 'https://via.placeholder.com/150/00FF00'; // Imagem 2
+        
+         } else if (opcaoSelecionada === 'aeronaltica') {
+                texto = 'Você escolheu aeronaltica!';
+                imgSrc = 'https://via.placeholder.com/150/0000FF'; // Imagem 3
+
+            } 
+            if  (texto && imgSrc) {
+                // Cria o elemento de texto
+                const textElement = document.createElement('p');
+                textElement.textContent = texto;
+
+                // Cria o elemento de imagem
+                const imgElement = document.createElement('img');
+                imgElement.src = imgSrc;
+                imgElement.alt = texto;
+
+                // Adiciona o texto e a imagem ao container
+                resultadoDiv.appendChild(textElement);
+                resultadoDiv.appendChild(imgElement);
+            }
+               
+    });
+</script>
 </body>
 </html>
