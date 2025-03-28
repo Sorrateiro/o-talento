@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Idade</title>
+    <style>
+        /* Estilo CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="date"],
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        // Função JavaScript
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const dataNascimentoInput = document.getElementById("dataNascimento").value;
+            const dataNascimento = new Date(dataNascimentoInput);
+            const hoje = new Date();
+
+            const idade = hoje.getFullYear() - dataNascimento.getFullYear();
+            const mes = hoje.getMonth() - dataNascimento.getMonth();
+            const dia = hoje.getDate() - dataNascimento.getDate();
+
+            // Ajusta a idade se necessário
+            if (mes < 0 || (mes === 0 && dia < 0)) {
+                idade--;
+            }
+
+            if (idade >= 17 && idade <= 18) {
+                alert("Formulário enviado com sucesso! Idade válida.");
+                console.log("Data de Nascimento:", dataNascimentoInput);
+                console.log("Idade:", idade);
+            } else {
+                alert("A idade deve ser entre 17 e 18 anos!");
+            }
+        });
+    </script>
+</body>
+</html>

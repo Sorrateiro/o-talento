@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Informações</title>
+    <style>
+        /* Estilo CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #0677f0;
+            color: white;
+            width: 99%;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #033c81;
+        }
+    </style>
+</head>
+<body>
+    <form id="formInfo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <label for="localNascimento">Local de Nascimento:</label>
+        <input type="text" id="localNascimento" name="localNascimento" required>
+
+        <input type="submit" value="Enviar" id="veril">
+    </form>
+    
+
+    <script>
+        // JavaScript para coleta de informações
+        document.getElementById("formInfo").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede envio padrão
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const endereco = document.getElementById("endereco").value;
+            const localNascimento = document.getElementById("localNascimento").value;
+
+            alert("Formulário enviado com sucesso!");
+            console.log("Nome:", nome);
+            console.log("Email:", email);
+            console.log("Endereço:", endereco);
+            console.log("Local de Nascimento:", localNascimento);
+        });
+    </script>
+</body>
+</html>
