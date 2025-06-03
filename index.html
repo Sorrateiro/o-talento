@@ -1,34 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>taxas de produtos</title>
-    <link rel="stylesheet" href="scripts/estilos001.css">
+    <title>GR Notícias</title>
+    <!-- #region -->
+    <!-- #endregion --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
     <header>
         <h1>
-            apresentação do site 
+            <img src="logo.png" alt="GR Notícias Logo" class="logo">
+            GR Notícias
+            
         </h1>
-        <p>
-            Apresentação simples
-        </p>
-        <h2>
-            O tema é tecnologia 
-        </h2>
-        <div>
-            <a href="">home</a> 
-            <a href="">sobre</a>
-            <a href="">ajuda</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <h1>GR Notícias</h1>
+        <p>Fique por dentro das últimas notícias!</p>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-        <select name="barras" id="ibarras"> selecionar : <br>
-            <option value="a1">a1</option>
-            <option value="b1">b1</option>
-            <option value="c1">c1</option>
-        </select>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="language-selector">
+            <select>
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        <div class="theme-toggle">
+            <button id="toggle-theme"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="login-register">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Registrar</button>
+        </div>
+        <div class="notifications">
+            <button id="notifications-btn"><i class="fas fa-bell"></i></button>
+            <span class="notification-count">3</span>
+        </div>
+        <div class="user-profile">
+            <img src="profile.jpg" alt="Perfil" class="profile-pic">
+            <span class="username">Usuário</span>
+            <div class="dropdown-menu">
+                <a href="#">Configurações</a>
+                <a href="#">Sair</a>
+            </div>
+        </div>
+        <div class="ad-banner">
+            <img src="ad-banner.jpg" alt="Anúncio">
+        </div>
+        <div class="breaking-news">
+            <marquee>Últimas notícias: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</marquee>
+        </div>
+  
     </header>
-    
-    </p>
+    <main>
+        <section class="news-section">
+            <article class="news-item">
+                <h2>Título da Notícia 1</h2>
+                <p>Descrição breve da notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="news-item">
+                <h2>Título da Notícia 2</h2>
+                <p>Descrição breve da notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="news-item">
+                <h2>Título da Notícia 3</h2>
+                <p>Descrição breve da notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+        </section>
+        <section class="featured-news">
+            <h2>Notícias em Destaque</h2>
+            <article class="featured-item">
+                <img src="featured1.jpg" alt="Notícia em Destaque 1">
+                <h3>Título da Notícia em Destaque 1</h3>
+                <p>Descrição breve da notícia em destaque 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="featured-item">
+                <img src="featured2.jpg" alt="Notícia em Destaque 2">
+                <h3>Título da Notícia em Destaque 2</h3>
+                <p>Descrição breve da notícia em destaque 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="featured-item">
+                <img src="featured3.jpg" alt="Notícia em Destaque 3">
+                <h3>Título da Notícia em Destaque 3</h3>
+                <p>Descrição breve da notícia em destaque 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+        </section>
+        <section class="latest-news">
+            <h2>Últimas Notícias</h2>
+            <article class="latest-item">
+                <h3>Título da Última Notícia 1</h3>
+                <p>Descrição breve da última notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="latest-item">
+                <h3>Título da Última Notícia 2</h3>
+                <p>Descrição breve da última notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+            <article class="latest-item">
+                <h3>Título da Última Notícia 3</h3>
+                <p>Descrição breve da última notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Leia mais</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 GR Notícias. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+    <script>
+        document.getElementById('toggle-theme').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.querySelector('i').classList.toggle('fa-moon');
+            this.querySelector('i').classList.toggle('fa-sun');
+        });
+
+        document.getElementById('login-btn').addEventListener('click', function() {
+            alert('Login clicked!');
+        });
+
+        document.getElementById('register-btn').addEventListener('click', function() {
+            alert('Register clicked!');
+        });
+
+        document.getElementById('notifications-btn').addEventListener('click', function() {
+            alert('Notifications clicked!');
+        });
+        document.querySelector('.user-profile').addEventListener('click', function() {
+            this.querySelector('.dropdown-menu').classList.toggle('show');
+        });
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.user-profile')) {
+                document.querySelector('.user-profile .dropdown-menu').classList.remove('show');
+            }
+        });
+        document.querySelector('.language-selector select').addEventListener('change', function() {
+            alert('Language changed to: ' + this.value);
+        });
+        document.querySelector('.search-bar button').addEventListener('click', function() {
+            const query = document.querySelector('.search-bar input').value;
+            alert('Searching for: ' + query);
+        });
+        document.querySelector('.ad-banner img').addEventListener('click', function() {
+            alert('Ad clicked!');
+        });
+        document.querySelector('.breaking-news marquee').addEventListener('click', function() {
+            alert('Breaking news clicked!');
+        });
+    </script>
+  
+    <footer>
+         <p>&copy; 2023 GR Notícias. Todos os direitos reservados.</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+
+    </footer>
 </body>
+
 </html>
