@@ -3,134 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alistamento</title>
-    <link rel="shortcut icon" href="pasta/homem-militar (1).png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <style>
-           body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    .erro {
-      color: red;
-    }
-    .sucesso {
-      color: green;
-    }
-        #result{
-
-            background-size: auto;
-            background-size: cover;
-           
-            width: 100%;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
-        #result img {
-            
-        
-            width: 100%;
-            display: block;
-            margin: 10px auto;}
-    </style>
+    <title>taxas de produtos</title>
+    <link rel="stylesheet" href="scripts/estilos001.css">
 </head>
-<body><header><img src="pasta/Enos-Layuk-Wacky-Dastardly-06-Sarge.48.png" alt="logotipo" id="long"> 
-     <h1>ALISTAMENTO MILITAR ONLINE   
+<body>
+    <header>
+        <h1>
+            apresentação do site 
+        </h1>
+        <p>
+            Apresentação simples
+        </p>
+        <h2>
+            O tema é tecnologia 
+        </h2>
+        <div>
+            <a href="">home</a> 
+            <a href="">sobre</a>
+            <a href="">ajuda</a>
+        </div>
+        <select name="barras" id="ibarras"> selecionar : <br>
+            <option value="a1">a1</option>
+            <option value="b1">b1</option>
+            <option value="c1">c1</option>
+        </select>
+    </header>
     
-    </h1>
-    <label for="interesse" class="OPTIONSD">escolha seu interesse </label>
-    <select id="opcoes" >
-        <option value="">--Selecione--</option>
-      <option value="marinha">marinha </option>
-      <option value="exercito">exercito</option>
-      <option value="aeronaltica">aeronaltica</option>
-      <option value="outros">outros </option>
-    </select>
-    
-</header>
-
-
-<div id="result"></div>
-<form id="formInfo">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" name="endereco" required>
-
-    <label for="localNascimento">Local de Nascimento:</label>
-    <input type="text" id="localNascimento" name="localNascimento" required>
-
-    <input type="submit" value="Enviar" id="veril">
-</form>
-
-
-<script>
-    // JavaScript para coleta de informações
-    document.getElementById("formInfo").addEventListener("submit", function(event) {
-        event.preventDefault(); // Impede envio padrão
-
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        const endereco = document.getElementById("endereco").value;
-        const localNascimento = document.getElementById("localNascimento").value;
-
-        alert("Formulário enviado com sucesso!");
-        console.log("Nome:", nome);
-        console.log("Email:", email);
-        console.log("Endereço:", endereco);
-        console.log("Local de Nascimento:", localNascimento);
-    });
-</script>
-<script>
-    const selectElement = document.getElementById("opcoes");
-    const resultadoDiv = document.getElementById("result");
- 
-    selectElement.addEventListener('change', function(){
-        const opcaoSelecionada= selectElement.value;
-
-        // Cria o texto correspondente à opção selecionada
-        resultadoDiv.innerHTML = '';
-
-        let texto='';
-        let imgSrc = '';
-
-         // Define texto e imagem com base na opção selecionada
-        if (opcaoSelecionada==='marinha') {
-            texto='voce selecionou a opção marinha ';  
-            imgSrc = 'pasta/marinha do brazil.png'; 
-            
-         
-         } else if(opcaoSelecionada==='exercito'){
-            texto='voce selecionou exercito do brazil ';
-            imgSrc = 'https://via.placeholder.com/150/00FF00'; // Imagem 2
-        
-         } else if (opcaoSelecionada === 'aeronaltica') {
-                texto = 'Você escolheu aeronaltica!';
-                imgSrc = 'https://via.placeholder.com/150/0000FF'; // Imagem 3
-
-            } 
-            if  (texto && imgSrc) {
-                // Cria o elemento de texto
-                const textElement = document.createElement('p');
-                textElement.textContent = texto;
-
-                // Cria o elemento de imagem
-                const imgElement = document.createElement('img');
-                imgElement.src = imgSrc;
-                imgElement.alt = texto;
-
-                // Adiciona o texto e a imagem ao container
-                resultadoDiv.appendChild(textElement);
-                resultadoDiv.appendChild(imgElement);
-            }
-               
-    });
-    
-</script>
+    </p>
 </body>
 </html>
