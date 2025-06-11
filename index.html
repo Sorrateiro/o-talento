@@ -7,29 +7,42 @@
     <title>GR Notícias</title>
     <!-- #region -->
     <!-- #endregion --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="scripts/estilos001.css">
 </head>
 <body>
-    <header>
+    <header class="header">
+      
         <h1>
             <img src="logo.png" alt="GR Notícias Logo" class="logo">
             GR Notícias
             
         </h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <p>
+                <a href="index.html">Home</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </p>
         </nav>
-        <h1>GR Notícias</h1>
-        <p>Fique por dentro das últimas notícias!</p>
+        <select id="idioma">
+    <option value="pt">Português</option>
+    <option value="en">English</option>
+    <option value="es">Español</option>
+</select>
+
+<div id="conteudo">
+    <h1>Bem-vindo!</h1>
+    <p>Este é um texto de exemplo que será traduzido.</p>
+</div>
+
+
+        
+       
         <div class="search-bar">
             <input type="text" placeholder="Pesquisar...">
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <button type="submit" class="search-button" onclick="pesquisa()">procurar</button>
+    
         </div>
         <div class="social-media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -39,8 +52,9 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         <div class="language-selector">
-            <select>
-                <option value="pt">Português</option>
+            <select id="language-select">
+                <option value="pt-BR" selected>Português (Brasil)</option>
+                
                 <option value="en">English</option>
                 <option value="es">Español</option>
             </select>
@@ -68,118 +82,58 @@
             <img src="ad-banner.jpg" alt="Anúncio">
         </div>
         <div class="breaking-news">
-            <marquee>Últimas notícias: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</marquee>
+            <marquee>Últimas notícias: uma nova era .</marquee>
         </div>
-  
-    </header>
-    <main>
+</header>
+
+    <main id="textodocorpo">
         <section class="news-section">
-            <article class="news-item">
+            <article class="news-item" id="noticia1">
                 <h2>Título da Notícia 1</h2>
                 <p>Descrição breve da notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
-            <article class="news-item">
+            <article class="news-item" id="noticia1">
                 <h2>Título da Notícia 2</h2>
                 <p>Descrição breve da notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
-            <article class="news-item">
+            <article class="news-item" id="noticia1">
                 <h2>Título da Notícia 3</h2>
                 <p>Descrição breve da notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
         </section>
-        <section class="featured-news">
+        <article class="news-item" id="noticia1">
             <h2>Notícias em Destaque</h2>
-            <article class="featured-item">
+            <article class="news-item" id="noticia1">
                 <img src="featured1.jpg" alt="Notícia em Destaque 1">
                 <h3>Título da Notícia em Destaque 1</h3>
                 <p>Descrição breve da notícia em destaque 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
-            <article class="featured-item">
+            <article class="news-item" id="noticia1">
                 <img src="featured2.jpg" alt="Notícia em Destaque 2">
                 <h3>Título da Notícia em Destaque 2</h3>
                 <p>Descrição breve da notícia em destaque 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
-            <article class="featured-item">
+            <article class="news-item" id="noticia1">
                 <img src="featured3.jpg" alt="Notícia em Destaque 3">
                 <h3>Título da Notícia em Destaque 3</h3>
                 <p>Descrição breve da notícia em destaque 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
             </article>
-        </section>
-        <section class="latest-news">
-            <h2>Últimas Notícias</h2>
-            <article class="latest-item">
-                <h3>Título da Última Notícia 1</h3>
-                <p>Descrição breve da última notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article class="latest-item">
-                <h3>Título da Última Notícia 2</h3>
-                <p>Descrição breve da última notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article class="latest-item">
-                <h3>Título da Última Notícia 3</h3>
-                <p>Descrição breve da última notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-        </section>
+      
+
     </main>
     <footer>
         <p>&copy; 2023 GR Notícias. Todos os direitos reservados.</p>
         <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </footer>
-    <script>
-        document.getElementById('toggle-theme').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            this.querySelector('i').classList.toggle('fa-moon');
-            this.querySelector('i').classList.toggle('fa-sun');
-        });
-
-        document.getElementById('login-btn').addEventListener('click', function() {
-            alert('Login clicked!');
-        });
-
-        document.getElementById('register-btn').addEventListener('click', function() {
-            alert('Register clicked!');
-        });
-
-        document.getElementById('notifications-btn').addEventListener('click', function() {
-            alert('Notifications clicked!');
-        });
-        document.querySelector('.user-profile').addEventListener('click', function() {
-            this.querySelector('.dropdown-menu').classList.toggle('show');
-        });
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.user-profile')) {
-                document.querySelector('.user-profile .dropdown-menu').classList.remove('show');
-            }
-        });
-        document.querySelector('.language-selector select').addEventListener('change', function() {
-            alert('Language changed to: ' + this.value);
-        });
-        document.querySelector('.search-bar button').addEventListener('click', function() {
-            const query = document.querySelector('.search-bar input').value;
-            alert('Searching for: ' + query);
-        });
-        document.querySelector('.ad-banner img').addEventListener('click', function() {
-            alert('Ad clicked!');
-        });
-        document.querySelector('.breaking-news marquee').addEventListener('click', function() {
-            alert('Breaking news clicked!');
-        });
-    </script>
   
-    <footer>
-         <p>&copy; 2023 GR Notícias. Todos os direitos reservados.</p>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
-
-    </footer>
+  
+    <script src="scripts/scriptsdosite.js"></script>
 </body>
 
 </html>
