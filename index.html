@@ -4,85 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GR Notícias</title>
+    <title>TS Notícias</title>
     <!-- #region -->
     <!-- #endregion --> 
     <link rel="stylesheet" href="scripts/estilos001.css">
+    <link rel="stylesheet" href="fontes.css">
+    <link rel="shortcut icon" href="imagens/Arrioch-Blawb-News.128.png" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-      
+    <header class="header" id="qru">   
         <h1>
-            <img src="logo.png" alt="GR Notícias Logo" class="logo">
-            GR Notícias
-            
+            <img src="imagens/ts logo01.png" alt="GR Notícias Logo" class="logo"> 
+      <p><button class="menu-tres-pontos" title="Mais opções" style="position: fixed; font-weight: bolder; ">&#8942;</button></p>
         </h1>
         <nav>
             <p>
-                <a href="index.html">Home</a>
-                <a href="noticias.html">Notícias</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html">Contato</a>
+                <a href="index.html" target="_self" class="link-cabecalho">Home</a>  
+                <a href="noticias.html" target="_self" class="link-cabecalho">Notícias</a>
+                <a href="sobre.html" target="_self" class="link-cabecalho">Sobre</a>
+                <a href="contato.html" target="_self" class="link-cabecalho">Contato</a>
             </p>
         </nav>
-        <select id="idioma">
-    <option value="pt">Português</option>
-    <option value="en">English</option>
-    <option value="es">Español</option>
-</select>
-
-<div id="conteudo">
-    <h1>Bem-vindo!</h1>
-    <p>Este é um texto de exemplo que será traduzido.</p>
-</div>
-
-
-        
-       
         <div class="search-bar">
             <input type="text" placeholder="Pesquisar...">
             <button type="submit" class="search-button" onclick="pesquisa()">procurar</button>
-    
+
         </div>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-        <div class="language-selector">
-            <select id="language-select">
-                <option value="pt-BR" selected>Português (Brasil)</option>
-                
-                <option value="en">English</option>
-                <option value="es">Español</option>
-            </select>
-        </div>
-        <div class="theme-toggle">
-            <button id="toggle-theme"><i class="fas fa-moon"></i></button>
-        </div>
-        <div class="login-register">
-            <button id="login-btn">Login</button>
-            <button id="register-btn">Registrar</button>
-        </div>
-        <div class="notifications">
-            <button id="notifications-btn"><i class="fas fa-bell"></i></button>
-            <span class="notification-count">3</span>
-        </div>
-        <div class="user-profile">
-            <img src="profile.jpg" alt="Perfil" class="profile-pic">
-            <span class="username">Usuário</span>
-            <div class="dropdown-menu">
-                <a href="#">Configurações</a>
-                <a href="#">Sair</a>
-            </div>
-        </div>
-        <div class="ad-banner">
-            <img src="ad-banner.jpg" alt="Anúncio">
-        </div>
+ 
         <div class="breaking-news">
-            <marquee>Últimas notícias: uma nova era .</marquee>
+            <marquee> novidades</marquee>
         </div>
 </header>
 
@@ -90,7 +40,7 @@
         <section class="news-section">
             <article class="news-item" id="noticia1">
                 <h2>Título da Notícia 1</h2>
-                <p>Descrição breve da notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p></p>
                 <a href="#">Leia mais</a>
             </article>
             <article class="news-item" id="noticia1">
