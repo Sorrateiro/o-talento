@@ -15,7 +15,8 @@
     <header class="header" id="qru">   
         <h1>
             <img src="imagens/ts logo01.png" alt="GR Notícias Logo" class="logo"> 
-      <p><button class="menu-tres-pontos" title="Mais opções" style="position: fixed; font-weight: bolder; ">&#8942;</button></p>
+      
+            
         </h1>
         <nav>
             <p>
@@ -35,23 +36,42 @@
             <marquee> novidades</marquee>
         </div>
 </header>
-
-    <main id="textodocorpo">
+    <main>
         <section class="news-section">
+            <h2>Últimas Notícias</h2>
             <article class="news-item" id="noticia1">
-                <h2>Título da Notícia 1</h2>
-                <p></p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article class="news-item" id="noticia1">
-                <h2>Título da Notícia 2</h2>
+                <img src="news1.jpg" alt="Notícia 1">
+                <h3>Título da Notícia 1</h3>
+                <p>Descrição breve da notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               <P id="descricao-noticia1" class="descricao"></P>
+               <input type="button"  value="Leia Mais" onclick="leiaMais()">   
+
+                </article>
+            <article class="news-item" id="noticia2">
+                <img src="news2.jpg" alt="Notícia 2">
+                <h3>Título da Notícia 2</h3>
                 <p>Descrição breve da notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
+               <P id="descricao-noticia2" class="descricao"></P>
+                <input type="button" value="Leia Mais" onclick="leiaMais('noticia2')">
+
             </article>
-            <article class="news-item" id="noticia1">
-                <h2>Título da Notícia 3</h2>
+            <article class="news-item" id="noticia3">
+                <img src="news3.jpg" alt="Notícia 3">
+                <h3>Título da Notícia 3</h3>
                 <p>Descrição breve da notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               <P id="descricao-noticia3" class="descricao"></P>
+               <input type="button" value="Leia Mais" onclick="leiaMais('noticia3')">
+
+            </article>
+            <article class="news-item" id="noticia4">
+                <img src="news4.jpg" alt="Notícia 4">
+                <h3>Título da Notícia 4</h3>
+                <p>Descrição breve da notícia 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">Leia mais</a>
+                <p id="descricao-noticia4" class="descricao"></p>
+
+                <button class="botao-conteudo" data-conteudo="noticia4">Ver Mais</button>
+
             </article>
         </section>
         <article class="news-item" id="noticia1">
