@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="fontes.css">
     <link rel="shortcut icon" href="imagens/Arrioch-Blawb-News.128.png" type="image/x-icon">
 </head>
-<body>
+<body onload="carregar()">
     <header class="header" id="qru">   
         <h1>
             <img src="imagens/ts logo01.png" alt="GR Notícias Logo" class="logo"> 
@@ -33,7 +33,7 @@
         </div>
  
         <div class="breaking-news">
-            <marquee> novidades</marquee>
+            <marquee> Inflassão sobe e preço dos alimentos dispara, segundio Hadad , ministro da fazenda, isso é culpa do governo anterior.</marquee>
         </div>
 </header>
     <main>
@@ -42,61 +42,27 @@
             <article class="news-item" id="noticia1">
                 <img src="news1.jpg" alt="Notícia 1">
                 <h3>Título da Notícia 1</h3>
-                <p>Descrição breve da notícia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-               <P id="descricao-noticia1" class="descricao"></P>
-               <input type="button"  value="Leia Mais" onclick="leiaMais()">   
+                <p>aqui vem a noticia e depois continua para noticia</p>
+                <p id="noticia">mais noticias devem aparecer depois de clicar no button</p>
+                <button type="button" onclick="clicou()" id="botao" value="ver mais"> clicar </button>
 
-                </article>
-            <article class="news-item" id="noticia2">
-                <img src="news2.jpg" alt="Notícia 2">
-                <h3>Título da Notícia 2</h3>
-                <p>Descrição breve da notícia 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-               <P id="descricao-noticia2" class="descricao"></P>
-                <input type="button" value="Leia Mais" onclick="leiaMais('noticia2')">
 
-            </article>
-            <article class="news-item" id="noticia3">
-                <img src="news3.jpg" alt="Notícia 3">
-                <h3>Título da Notícia 3</h3>
-                <p>Descrição breve da notícia 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-               <P id="descricao-noticia3" class="descricao"></P>
-               <input type="button" value="Leia Mais" onclick="leiaMais('noticia3')">
 
-            </article>
-            <article class="news-item" id="noticia4">
-                <img src="news4.jpg" alt="Notícia 4">
-                <h3>Título da Notícia 4</h3>
-                <p>Descrição breve da notícia 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-                <p id="descricao-noticia4" class="descricao"></p>
 
-                <button class="botao-conteudo" data-conteudo="noticia4">Ver Mais</button>
+       
 
-            </article>
-        </section>
-        <article class="news-item" id="noticia1">
-            <h2>Notícias em Destaque</h2>
-            <article class="news-item" id="noticia1">
-                <img src="featured1.jpg" alt="Notícia em Destaque 1">
-                <h3>Título da Notícia em Destaque 1</h3>
-                <p>Descrição breve da notícia em destaque 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article class="news-item" id="noticia1">
-                <img src="featured2.jpg" alt="Notícia em Destaque 2">
-                <h3>Título da Notícia em Destaque 2</h3>
-                <p>Descrição breve da notícia em destaque 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-            <article class="news-item" id="noticia1">
-                <img src="featured3.jpg" alt="Notícia em Destaque 3">
-                <h3>Título da Notícia em Destaque 3</h3>
-                <p>Descrição breve da notícia em destaque 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Leia mais</a>
-            </article>
-      
 
     </main>
+        <section class="news-section">
+    <h2>Últimas Notícias</h2>
+    <article class="news-item" id="noticia1" style="display: none;">
+        <img src="news1.jpg" alt="Notícia 1">
+        <h3>Título da Notícia 1</h3>
+        <p>aqui vem a noticia e depois continua para noticia</p>
+        <p>mais noticias devem aparecer depois de clicar no botão</p>
+    </article>
+    <button type="button" onclick="mostrarNoticia()" id="botao">Mostrar notícia</button>
+</section>
     <footer>
         <p>&copy; 2023 GR Notícias. Todos os direitos reservados.</p>
         <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
