@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Área de login/cadastro -->
+<div id="area-login">
+    <form id="form-login" onsubmit="return fazerLogin()">
+        <input type="text" id="usuario" placeholder="Usuário" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <p id="mensagem-login"></p>
+    <p>Não tem cadastro? <a href="cadastro.html">Cadastre-se aqui</a></p>
+</div>
+
+<!-- Área do usuário logado -->
+<div id="area-usuario" style="display:none;">
+    <p>Bem-vindo, <span id="nome-usuario"></span>!</p>
+    <button onclick="fazerLogout()">Sair</button>
+</div>
+
+<script>
+// Exemplo simples de login (apenas para demonstração)
+function fazerLogin() {
+    const usuario = document.getElementById('usuario').value;
+    // Aqui você pode validar o usuário/senha com backend ou localStorage
+    if (usuario) {
+        document.getElementById('area-login').style.display = 'none';
+        document.getElementById('area-usuario').style.display = 'block';
+        document.getElementById('nome-usuario').textContent = usuario;
+    } else {
+        document.getElementById('mensagem-login').textContent = 'Usuário ou senha inválidos!';
+    }
+    return false; // Evita o envio do formulário
+}
+
+function fazerLogout() {
+    document.getElementById('area-login').style.display = 'block';
+    document.getElementById('area-usuario').style.display = 'none';
+    document.getElementById('usuario').value = '';
+    document.getElementById('senha').value = '';
+}
+</script>
+</body>
+</html>
