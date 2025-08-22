@@ -22,5 +22,65 @@
         <button type="submit">Cadastrar</button>
     </form>
     <p>Já tem cadastro? <a href="longar.html">Entrar</a></p>
+
+    <ul>
+        <li onclick="toggleParagraph(0)">
+            <span id="arrow0">&#9660;</span> Item 1
+        </li>
+        <p id="para0" style="display:none;">Parágrafo do Item 1</p>
+        <li onclick="toggleParagraph(1)">
+            <span id="arrow1">&#9660;</span> Item 2
+        </li>
+        <p id="para1" style="display:none;">Parágrafo do Item 2</p>
+        <li onclick="toggleParagraph(2)">
+            <span id="arrow2">&#9660;</span> Item 3
+        </li>
+        <p id="para2" style="display:none;">Parágrafo do Item 3</p>
+        <li onclick="toggleParagraph(3)">
+            <span id="arrow3">&#9660;</span> Item 4
+        </li>
+        <p id="para3" style="display:none;">Parágrafo do Item 4</p>
+        <li onclick="toggleParagraph(4)">
+            <span id="arrow4">&#9660;</span> Item 5
+        </li>
+        <p id="para4" style="display:none;">Parágrafo do Item 5</p>
+        <li onclick="toggleParagraph(5)">
+            <span id="arrow5">&#9660;</span> Item 6
+        </li>
+        <p id="para5" style="display:none;">Parágrafo do Item 6</p>
+        <li onclick="toggleParagraph(6)">
+            <span id="arrow6">&#9660;</span> Item 7
+        </li>
+        <p id="para6" style="display:none;">Parágrafo do Item 7</p>
+        <li onclick="toggleParagraph(7)">
+            <span id="arrow7">&#9660;</span> Item 8
+        </li>
+        <p id="para7" style="display:none;">Parágrafo do Item 8</p>
+        <li onclick="toggleParagraph(8)">
+            <span id="arrow8">&#9660;</span> Item 9
+        </li>
+        <p id="para8" style="display:none;">Parágrafo do Item 9</p>
+        <li onclick="toggleParagraph(9)">
+            <span id="arrow9">&#9660;</span> Item 10
+        </li>
+        <p id="para9" style="display:none;">Parágrafo do Item 10</p>
+        <li onclick="toggleParagraph(10)">
+            <span id="arrow10">&#9660;</span> Item 11
+        </li>
+        <p id="para10" style="display:none;">Parágrafo do Item 11</p>
+        <li onclick="toggleParagraph(11)">
+            <span id="arrow11">&#9660;</span> Item 12
+        </li>
+        <p id="para11" style="display:none;">Parágrafo do Item 12</p>
+    </ul>
+    <script>
+    function toggleParagraph(index) {
+        const para = document.getElementById('para' + index);
+        const arrow = document.getElementById('arrow' + index);
+        const isHidden = para.style.display === 'none' || para.style.display === '';
+        para.style.display = isHidden ? 'block' : 'none';
+        arrow.innerHTML = isHidden ? '&#9650;' : '&#9660;'; // ▲ : ▼
+    }
+    </script></li>
 </body>
 </html>
